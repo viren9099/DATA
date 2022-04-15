@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "viren", "viren\viren.dtproj", "{29B1CA41-2762-4FBF-B300-6B8BD3711DF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29B1CA41-2762-4FBF-B300-6B8BD3711DF1}.Development|Default.ActiveCfg = Development
+		{29B1CA41-2762-4FBF-B300-6B8BD3711DF1}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5993BAA-9190-445C-A4CC-CB5C44E1A469}
+	EndGlobalSection
+EndGlobal

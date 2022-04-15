@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/5/2022 2:39:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KCSLAP5275"
+  DTS:CreatorName="KCSITGLOBAL\Viren.Vaishnav"
+  DTS:DTSID="{EE83DBBA-D934-452C-A5D3-DC28F4C7CF66}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{D153E35B-5AF5-4A5D-B0FF-9EF325697844}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9428D959-22AD-4C95-89D4-CB7C5BAC5853}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\viren\UpgradeLog.htm">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&lt;!DOCTYPE html&gt;"
+              DTS:DTSID="{81D11307-8B00-4066-AD7D-26E3A51920C7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[text]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{A4F07B52-EDD4-45B6-98B0-8D5DC6CEBD5D}"
+      DTS:ObjectName="text">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="D:\vv\text" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[UpgradeLog.htm]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{BBE7E67B-5B01-46D8-9EAB-5D773E50138D}"
+      DTS:ObjectName="UpgradeLog.htm">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="D:\ssrs practice\ssrs_practice\UpgradeLog.htm" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[viren]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{943C980B-7660-4081-8387-D360E82DE9EC}"
+      DTS:ObjectName="viren">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="D:\viren" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{BFC10BDE-157D-4F53-B4F7-7EFBC4E77612}"
+      DTS:ObjectName="vv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="D:\vv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{C034DF3D-30F5-4ACD-8C51-DC7101056A5A}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="CreateDirectory"
+          TaskSourcePath="{943C980B-7660-4081-8387-D360E82DE9EC}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task 1"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{8E38BA92-BA2A-4C59-83F6-86F50890EFDD}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task 1"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskSourcePath="{BBE7E67B-5B01-46D8-9EAB-5D773E50138D}"
+          TaskDestinationPath="{943C980B-7660-4081-8387-D360E82DE9EC}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task 2"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{CE3F3C9A-E1FF-4C18-8030-A9D27EE2E528}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task 2"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="DeleteFile"
+          TaskSourcePath="{BBE7E67B-5B01-46D8-9EAB-5D773E50138D}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AD46282A-F849-4334-A627-D35C3B9EF514}"
+      DTS:From="Package\File System Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\File System Task 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B5FBEFEB-4602-4BA3-9C50-C5461A2A81D2}"
+      DTS:From="Package\File System Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\File System Task 2" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\File System Task"
+          TopLeft="143.333327637779,42.4666670041614" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\File System Task 1"
+          TopLeft="329.999986886979,253.933335351414" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="222.533327637779,84.0666670041614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="190.6666592492,169.866668347253"
+              Start="0,0"
+              End="190.6666592492,162.366668347253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.9333341736263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,80.9333341736263"
+                    Point2="0,84.9333341736263"
+                    Point3="4,84.9333341736263" />
+                  <mssgle:LineSegment
+                    End="186.6666592492,84.9333341736263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="186.6666592492,84.9333341736263"
+                    Point2="190.6666592492,84.9333341736263"
+                    Point3="190.6666592492,88.9333341736263" />
+                  <mssgle:LineSegment
+                    End="190.6666592492,162.366668347253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\File System Task 2"
+          TopLeft="559.9999777476,396.933336487876" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="413.199986886979,295.533335351414">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="229.999990860621,101.400001136462"
+              Start="0,0"
+              End="229.999990860621,93.9000011364625">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.7000005682312" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.7000005682312"
+                    Point2="0,50.7000005682312"
+                    Point3="4,50.7000005682312" />
+                  <mssgle:LineSegment
+                    End="225.999990860621,50.7000005682312" />
+                  <mssgle:CubicBezierSegment
+                    Point1="225.999990860621,50.7000005682312"
+                    Point2="229.999990860621,50.7000005682312"
+                    Point3="229.999990860621,54.7000005682312" />
+                  <mssgle:LineSegment
+                    End="229.999990860621,93.9000011364625" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

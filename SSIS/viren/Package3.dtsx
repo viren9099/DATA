@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2022 2:52:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KCSLAP5275"
+  DTS:CreatorName="KCSITGLOBAL\Viren.Vaishnav"
+  DTS:DTSID="{45035696-35D3-4566-A221-385B93188C20}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package3"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{5B9D48B9-9090-4D05-94E8-8F8F939FE4F8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>
